@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Footer from './Footer'
  interface SiderbarProps{
   user: {
     firstName:string;
@@ -38,12 +39,12 @@ const Sidebar = ({user}: SiderbarProps) => {
                 alt={item.label}
                 fill
                 className={cn({
-                  'brightness-[3] invert-0': isActive
+                  'brightness-[3] invert-0': isActive,
                 })}
                 />
               </div>
               <p className={cn('sidebar-label',{
-                '!text-white': isActive
+                '!text-white': isActive,
               })}>
                 {item.label}
               </p>
@@ -52,7 +53,7 @@ const Sidebar = ({user}: SiderbarProps) => {
           })}
           USER
         </nav>
-        FOOTER
+        <Footer user={user} />
     </section>
  
   )
