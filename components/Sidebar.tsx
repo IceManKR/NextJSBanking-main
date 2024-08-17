@@ -5,14 +5,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Footer from './Footer'
- interface SiderbarProps{
+
+
+
+ interface SidebarProps{
   user: {
-    firstName:string;
-    lastName:string;
+    firstName: string;
+    lastName: string;
   };
  }
 
-const Sidebar = ({user}: SiderbarProps) => {
+const Sidebar = ({user}: SidebarProps) => {
   const pathname = usePathname();
   return (
     <section className="sidebar">

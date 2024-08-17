@@ -5,6 +5,7 @@ import BankCard from './BankCard'
 
 
 
+
 const RightSidebar = ({user,transactions,banks}:RightSidebarProps) => {
   return (
     <aside className="right-sidebar">
@@ -58,7 +59,6 @@ const RightSidebar = ({user,transactions,banks}:RightSidebarProps) => {
                               />
                             </div>
                     )}
-
                 </div>
             )}
         </section>
